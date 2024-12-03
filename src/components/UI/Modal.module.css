@@ -1,0 +1,22 @@
+.modelBackdrop {
+    position: fixed;
+    width: 100vw;
+    height:100vh;
+    background-color: rgba(50,50,50,0.8);
+    z-index:1
+}
+
+.modalContent {
+    z-index: 2;
+    background-color: #fff;
+    position: fixed;
+    width: 90%;
+    max-width: 1280px;
+    left: 50%;
+    transform: translateX(-50%);
+    top:10%;
+    max-height: 700px;
+    height: 75%;
+    overflow-y: auto;
+    border-radius: 8px;
+}
