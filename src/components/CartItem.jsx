@@ -16,34 +16,46 @@ function CartItem({id, title, price, quantity,img}) {
           <img src={img} alt={title} className={styles.cartImg} />
         </div>
         <h3>{title}</h3>
-
       </div>
 
       {/* Right */}
       <div className={styles.otherControls}>
-          <div >
-              <button className={styles.qtyInput} onClick={()=>{
-            if(quantity <= 1) {return}
-            decreaseQty(id)}}>
-                <AiOutlineMinus/>
-              </button>
-              <span className={styles.qtyDisplay}>{quantity}</span>
-              <button className={styles.qtyInput} onClick={()=>{increaseQty(id)}}>
-                <AiOutlinePlus/>
-              </button>
-          </div>
-          <p className={styles.totalCartPrice}>&#8377; {price * quantity}</p>
-          <div className={styles.removeItemBtn}  onClick={()=>{
-            removeItemFromCart(id)
-          }}>
-            <FaTrashAlt/>
-          </div>
+        <div>
+          <button
+            className={styles.qtyInput}
+            onClick={() => {
+              if (quantity <= 1) {
+                return;
+              }
+              decreaseQty(id);
+            }}
+          >
+            <AiOutlineMinus />
+          </button>
+          <span className={styles.qtyDisplay}>{quantity}</span>
+          <button
+            className={styles.qtyInput}
+            onClick={() => {
+              increaseQty(id);
+            }}
+          >
+            <AiOutlinePlus />
+          </button>
+        </div>
+        <p className={styles.totalCartPrice}>&#8377; {price * quantity}</p>
+
+        <button
+          className={styles.removeItemBtn}
+          onClick={() => {
+            removeItemFromCart(id);
+          }}
+        >
+          <FaTrashAlt />
+        </button>
+        
       </div>
-
-
-       
     </div>
-  )
+  );
 }
 
 export default CartItem

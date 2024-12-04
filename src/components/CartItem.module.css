@@ -48,6 +48,10 @@
     font-weight: 600;
 }
 
+.removeItemBtn{
+    border: none;
+}
+
 @media screen and (max-width:900px) {
     .cartItem{
         grid-template-columns: repeat(1,1fr);
